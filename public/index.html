@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* html, body {
+            background-color: #0a0015;
+            margin: 0;
+            padding: 0;
+        } */
+    </style>
+    <script>
+        // function checkTime() {
+        //     const now = new Date();
+            
+        //     // Get current IST hour by adding 5 hours and 30 minutes to UTC
+        //     const currentISTHour = now.getUTCHours() + 5 + (now.getUTCMinutes() + 30 >= 60 ? 1 : 0);
+        //     const currentISTMinute = (now.getUTCMinutes() + 30) % 60;
+        //     console.log(currentISTHour, currentISTMinute)
+        //     // Check if current time is 3 AM IST (21:30 UTC previous day)
+        //     if (currentISTHour === 1 && currentISTMinute === 39) {
+        //         window.location.href = '/launching';
+        //     }
+        // }
+
+        // // Check every minute
+        // setInterval(checkTime, 60000);
+        // checkTime(); // Check immediately on page load
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="websiteName"></h1>
+        <div id="onlineUsers">Online Users: <span id="userCount">0</span></div>
+    </header>
+    <main>
+        <form id="thoughtForm">
+            <textarea id="thoughtInput" placeholder="Share your thought..." required></textarea>
+            <button type="submit">Post</button>
+        </form>
+        <!-- <button onclick="loadThoughts()">load</button> -->
+        <div id="thoughts"></div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

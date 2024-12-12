@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0a0015;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a2a3a;
+}
+
+#websiteName {
+    color: #ffffff;
+    margin: 0;
+}
+
+#onlineUsers {
+    background-color: #1a1a2a;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#thoughtForm {
+    margin-bottom: 20px;
+}
+
+#thoughtInput {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #1a1a2a;
+    border: 1px solid #2a2a3a;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#thoughtForm button {
+    background-color: #4a4a5a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#thoughtForm button:hover {
+    background-color: #5a5a6a;
+}
+
+.thought {
+    border: 1px solid #2a2a3a;
+    background-color: #1a1a2a;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.voteCount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.voteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #808080;
+    margin-left: 5px;
+}
+
+.voted{
+    color: #4a90e2;
+}
+
+.deleteButton {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 80px;
+    background-color: #f4da02;
+    color: #4a4a4a;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.blockButton {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.thoughtIp {
+    display: none;
+}
+
+.adminView .deleteButton {
+    display: block;
+}
+
+.adminView .blockButton {
+    display: block;
+}
+
+
+.adminView .thoughtIp {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+a {
+    color: #4a90e2;
+}
+
+input, textarea, button {
+    font-family: Arial, sans-serif;
+}
+
+::placeholder {
+    color: #888;
+}
+
+
+/* .adminView .deleteButton {
+    position: static;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+} */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #onlineUsers {
+        margin-top: 10px;
+    }
+
+    #thoughtForm button {
+        width: 100%;
+    }
+
+    .thought {
+        padding: 10px;
+    }
+
+    .voteCount {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
+/* 
+    .deleteButton {
+        position: static;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    } */
+}
